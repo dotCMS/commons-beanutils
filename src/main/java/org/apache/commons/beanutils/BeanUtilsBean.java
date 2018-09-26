@@ -27,6 +27,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 
@@ -139,6 +140,14 @@ public class BeanUtilsBean {
                             final PropertyUtilsBean propertyUtilsBean) {
 
         this.convertUtilsBean = convertUtilsBean;
+
+        HashSet<String> suppressProperties = new HashSet();
+        suppressProperties.add("class");
+        suppressProperties.add("multipartRequestHandler");
+        suppressProperties.add("resultValueMap");
+        log.info("adding the SuppressPropertiesBeanIntrospector to BeanUtilBean");
+        propertyUtilsBean.addBeanIntrospector(new SuppressPropertiesBeanIntrospector(suppressProperties));
+        propertyUtilsBean.clearDescriptors();
         this.propertyUtilsBean = propertyUtilsBean;
     }
 
