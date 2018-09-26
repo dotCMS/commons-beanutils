@@ -40,7 +40,7 @@
  |                                                                      |
  +======================================================================+
 --->
-Apache Commons BeanUtils
+Apache Commons BeanUtils Patched
 ===================
 
 Apache Commons BeanUtils provides an easy-to-use but flexible wrapper around reflection and introspection.
@@ -48,36 +48,9 @@ Apache Commons BeanUtils provides an easy-to-use but flexible wrapper around ref
 Documentation
 -------------
 
-More information can be found on the [homepage](https://commons.apache.org/proper/commons-beanutils).
-The [JavaDoc](https://commons.apache.org/proper/commons-beanutils/javadocs/api-release) can be browsed.
-Questions related to the usage of Apache Commons BeanUtils should be posted to the [user mailing list][ml].
+This is a copy of the Apache BeanUtils 1.9.3 release that has been patched against this vunerability
+https://www.cvedetails.com/cve/CVE-2014-0114/
 
-Where can I get the latest release?
------------------------------------
-You can download source and binaries from our [download page](https://commons.apache.org/proper/commons-beanutils/download_beanutils.cgi).
-
-Alternatively you can pull it from the central Maven repositories:
-
-```xml
-<dependency>
-  <groupId>commons-beanutils</groupId>
-  <artifactId>commons-beanutils</artifactId>
-  <version>1.9.3</version>
-</dependency>
-```
-
-Contributing
-------------
-
-We accept PRs via github. The [developer mailing list][ml] is the main channel of communication for contributors.
-There are some guidelines which will make applying PRs easier for us:
-+ No tabs! Please use spaces for indentation.
-+ Respect the code style.
-+ Create minimal diffs - disable on save actions like reformat source code or organize imports. If you feel the source code should be reformatted create a separate PR for this change.
-+ Provide JUnit tests for your changes and make sure your changes don't break any existing tests by running ```mvn clean test```.
-
-If you plan to contribute on a regular basis, please consider filing a [contributor license agreement](https://www.apache.org/licenses/#clas).
-You can learn more about contributing via GitHub in our [contribution guidelines](CONTRIBUTING.md).
 
 License
 -------
